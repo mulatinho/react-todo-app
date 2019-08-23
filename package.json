@@ -1,0 +1,33 @@
+{
+  "name": "superplayer-project",
+  "version": "1.0.0",
+  "description": "a simple project for superplayer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "server": "node_modules/.bin/nodemon index.js",
+    "test": "mocha --exit || true"
+  },
+  "keywords": [
+    "project",
+    "tasks",
+    "web"
+  ],
+  "author": "Alexandre Mulatinho",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "sequelize": "^5.8.6",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
+  }
+}
