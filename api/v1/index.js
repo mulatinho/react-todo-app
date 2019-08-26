@@ -1,26 +1,20 @@
 /*
-  Superplayer Project 
+  Superplayer Project
     (c) 2019 Alexandre Mulatinho
 */
 
 require('./common.js')
 
 exports.connect = function(router, sequelize) {
-  var sessions = require('./sessions');
   var projects = require('./projects');
   var tasks    = require('./tasks');
 
-  // sessions
-  router.post('/sessions/login', sessions.login);
-  router.post('/sessions/signup', sessions.signup);
-  router.get('/sessions/logout', sessions.destroy);
-
   // projects
   router.get('/projects', projects.get);
-  router.post('/projects', projects.create);
   router.get('/projects/:id', projects.get);
   router.put('/projects/:id', projects.update);
   router.delete('/projects/:id', projects.destroy);
+  router.post('/projects', projects.create);
 
   // tasks
   router.get('/tasks', tasks.get);

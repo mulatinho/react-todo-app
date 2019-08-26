@@ -8,18 +8,17 @@
 module.exports = function(sequelize, DataTypes) {
   let task = sequelize.define("task", {
     id: { type: DataTypes.UUID, defaultValue: DataTypes.UUIDV4, primaryKey: true },
-    title: { type: DataTypes.STRING, allowNull: false },
-    description: { type: DataTypes.TEXT, allowNull: true },
-    due_date: { type: DataTypes.DATE, allowNull: true },
-    status: { type: DataTypes.STRING, allowNull: true },
+    description: { type: DataTypes.STRING, allowNull: false },
+    owner: { type: DataTypes.STRING, allowNull: true },
+    due_date: { type: DataTypes.DATE, defaltValue: Date.now() },
+    status: { type: DataTypes.INTEGER, defaultValue: 0 },
     active: { type: DataTypes.BOOLEAN, defaultValue: true }
   }, {
     underscored: true
   });
 
   task.associate = function(models) {
-    task.belongsTo(models.user, { onDelete: 'cascade', foreignKey: { name: 'user_id', allowNull: false } });
-    task.belongsTo(models.project, { onDelete: 'cascade', foreignKey: { name: 'project_id', allowNull: true } });
+    task.belongsTo(models.project, { onDelete: 'cascade', foreignKey: { name: 'project_id', allowNull: false } });
   }
 
   return task;

@@ -4,7 +4,7 @@
   "description": "a simple project for superplayer",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "concurrently \"node .\" \"cd views && npm start\"",
     "server": "node_modules/.bin/nodemon index.js",
     "test": "mocha --exit || true"
   },
@@ -17,11 +17,10 @@
   "license": "GPL-2.0",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
     "express": "^4.17.0",
-    "express-session": "^1.16.1",
     "sequelize": "^5.8.6",
-    "sequelize-cli": "^5.4.0",
     "sqlite3": "^4.0.8"
   },
   "devDependencies": {

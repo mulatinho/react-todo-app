@@ -4,19 +4,18 @@
 */
 
 (function () {
+  checkStatus = function(inputDate) {
+    var dateToInteger = String(inputDate).split('T')[0].replace(/-/g,'')
+    var todayIs = new Date().toISOString().split('T')[0].replace(/-/g,'')
 
-  CheckUser = function (request, callback) {
-    const header_session_token = request.headers['authorization'] || null;
+    dateToInteger = parseInt(dateToInteger)
+    todayIs = parseInt(todayIs)
 
-    if (header_session_token == null) { return callback(null); }
-
-    db.user.findOne({
-      where: { session_token: header_session_token },
-      attributes: {exclude: [ "password", "session_token" ]}
-    }).then(function(user) {
-      if (!user) { return callback(null); }
-      return callback(user);
-    }).catch(error => { console.log(error) });
+    if (dateToInteger < todayIs) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 
   htmlEntities = function(str) {
