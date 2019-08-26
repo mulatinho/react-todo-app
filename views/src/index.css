@@ -1,0 +1,112 @@
+* {
+	font-family: 'Livvic', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.superplayer {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.contentContainerStyle {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.box-menu {
+  width: 30vw;
+  padding: 20px 20px 0px 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: gainsboro;
+
+}
+
+.box-content {
+  width: 70vw;
+  padding: 20px 20px 0px 20px;
+  background-color: white;
+}
+
+.box-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.box-header > h1 { width: 60%; }
+.box-header > p { width: 10%; }
+.box-header > a { width: 30%; text-align: right;}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 90%;
+}
+.task-item > input { padding-left: 10px; }
+.task-item > div > .title { padding-left: 10px; }
+.task-item > div > .owner { padding-left: 10px; }
+.task-item > div > .due_date { padding-left: 10px; }
+
+.task-color-desc-ok { color: black !important; }
+.task-color-rest-ok { color: grey !important; }
+
+.task-color-desc-late { color: red !important; }
+.task-color-rest-late { color: red !important; }
+
+.task-color-desc-complete { color: grey !important; }
+.task-color-rest-complete { color: grey !important; }
+
+.addTask {
+  padding-top: 20px;
+  padding-left: 30px;
+  color: blue;
+}
+
+.projectName {
+  padding-top: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 100%;
+  border-bottom: 1px solid black !important ;
+}
+
+.datepicker {
+	border-bottom: 0px !important ;
+}
+
+.selectElem {
+	border: none;
+}
+
+.color-blue { color: blue; }
+.littleUp { margin-top: -15px; }
+.minUp { margin-top: -10px; }
+.lineThrough { text-decoration: line-through; }
+
+
+a { text-decoration: none; color: black; }
+h1 { font-size: 125%; }
+h2 { font-size: 115%; }
+
+full-width { width: 100%; }
+input[type=text]
+{
+    border:none;
+}
