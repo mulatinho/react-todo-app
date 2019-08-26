@@ -1,3 +1,27 @@
+# backend
 *~
 data/*
 node_modules
+
+# dependencies
+views/*~
+views/*/*~
+views/node_modules
+views/.pnp
+views/.pnp.js
+
+# testing
+views/coverage
+
+# production
+views//build
+
+# misc
+views/.env.local
+views/.env.development.local
+views/.env.test.local
+views/.env.production.local
+
+views/npm-debug.log*
+views/yarn-debug.log*
+views/yarn-error.log*
