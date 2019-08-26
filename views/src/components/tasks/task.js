@@ -162,7 +162,7 @@ export default class Task extends React.Component {
   render() {
     return (
       <div className={`task-item ${this.state.task.rest_color}`}>
-        <input type="checkbox" onChange={this.cbTaskCheck}/>
+        <input type="checkbox" onChange={this.cbTaskCheck} checked={this.props.status == 2 ? true : false}/>
         &nbsp; &nbsp;
         <div>
           <input type="text" id="taskTitle" placeholder="type new task"
