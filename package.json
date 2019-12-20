@@ -1,7 +1,7 @@
 {
-  "name": "superplayer-project",
+  "name": "react-todo-app",
   "version": "1.0.0",
-  "description": "a simple project for superplayer",
+  "description": "a simple project for react.js with node.js",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"node .\" \"cd views && npm start\"",

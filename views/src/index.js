@@ -6,7 +6,7 @@ import Dashboard from './components/dashboard'
 
 function App() {
   return (
-    <div className="superplayer">
+    <div className="react-todo-app">
       <Dashboard/>
     </div>
   );

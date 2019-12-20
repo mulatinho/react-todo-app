@@ -1,9 +1,9 @@
-# superplayer-project
+# react-todo-app
 
 ## how to install
 
-    git clone git@github.com:mulatinho/superplayer-project.git
-    cd superplayer-project
+    git clone git@github.com:mulatinho/react-todo-app.git
+    cd react-todo-app
     npm install 
 
 this will install the backend
@@ -15,7 +15,7 @@ this will install the frontend
 
 ## how to run
 
-    cd superplayer-project
+    cd react-todo-app
     npm start
 
 
